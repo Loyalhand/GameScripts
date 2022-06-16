@@ -26,11 +26,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isGrounded == true)
             {
-                movement.y = jump;
-            } else
-            {
-                movement.y = 0;
-            }
+                rb.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
+            } 
         }
     }
 
