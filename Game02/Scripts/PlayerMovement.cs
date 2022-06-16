@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 movement.y = 0;
             }
-            Debug.Log(isGrounded);
         }
     }
 

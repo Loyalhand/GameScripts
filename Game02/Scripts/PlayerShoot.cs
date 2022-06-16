@@ -32,6 +32,5 @@ public class PlayerShoot : MonoBehaviour
         
         m_angle = Mathf.Atan2(shootDirection.y, shootDirection.x);
 
-        Debug.Log(m_angle);
     }
 }
