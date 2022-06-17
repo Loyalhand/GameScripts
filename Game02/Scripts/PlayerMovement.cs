@@ -22,18 +22,21 @@ public class PlayerMovement : MonoBehaviour
         // player input 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = 0;
-        if (Input.GetKey(KeyCode.Space))
-        {
-            if (isGrounded == true)
-            {
-                rb.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
-            } 
-        }
+       
     }
 
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (isGrounded == true)                        
+            {
+                rb.AddForce(new Vector2(0,1) * jump, ForceMode2D.Force);
+                Debug.Log(isGrounded);
+            } 
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
