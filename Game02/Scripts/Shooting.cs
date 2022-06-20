@@ -48,4 +48,6 @@ public class Shooting : MonoBehaviour
         transform.position = new Vector3(m_shootOffset * Mathf.Cos(PlayerShoot.m_angle) + playerTransform.position.x, m_shootOffset * Mathf.Sin(PlayerShoot.m_angle) + playerTransform.position.y, 0);
        
     }
+
+
 }
